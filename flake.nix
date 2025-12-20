@@ -8,7 +8,7 @@
   outputs = { self, nixpkgs }: let
     pkgs = nixpkgs.legacyPackages.x86_64-linux;
   in {
-    devShells.default = pkgs.mkShell {
+    devShells.x86_64-linux.default = pkgs.mkShell {
       buildInputs = [
         (pkgs.python3.withPackages (ps: [
           ps.flask 
@@ -21,7 +21,7 @@
       ];
     };
 
-    devShells.backend = pkgs.mkShell {
+    devShells.x86_64-linux.backend = pkgs.mkShell {
       buildInputs = [
         (pkgs.python3.withPackages (ps: [
           ps.flask 
@@ -32,7 +32,7 @@
       ];
     };
 
-    devShells.frontend = pkgs.mkShell {
+    devShells.x86_64-linux.frontend = pkgs.mkShell {
       buildInputs = [
         pkgs.nodejs
         pkgs.yarn
