@@ -9,18 +9,18 @@ This practices uses Nix flakes for reproducible develpment envirnments.
 
 ## Enter the Dev Environment
 
-For all tools at once: <nix develop>
+For all tools at once: nix develop
 
-Or just the backend: <nix develop .#backend>
+Or just the backend: nix develop .#backend
 
-or just the frontend: <nix develop .#frontend>
+or just the frontend: nix develop .#frontend
 
 Once inside the shell:
 
-**Frontend:**
+**Frontend:**:
 yarn dev
 
-**Backend:**
+**Backend:**:
 python myapp.py
 
 
