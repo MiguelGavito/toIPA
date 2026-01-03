@@ -82,6 +82,11 @@ python myapp.py
 - Nix flakes ensure all dependencies and versions are consistent for every team member.
 - If you encounter issues, check the Nix documentation or ask in the team chat.
 - For Windows users, always work inside the Ubuntu WSL terminal.
+- After finishing, you can clean all the download dependencies with the command:
+	```sh
+	nix-collect-garbage
+	```
+- to close temporal shells opened with nix develop or nix-shell use Ctrl + D.
 
 ---
 
