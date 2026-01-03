@@ -1,26 +1,94 @@
-# IPA Transalator Practice
+# IPA Translator Practice
 
-This practices uses Nix flakes for reproducible develpment envirnments.
+This project uses Nix flakes for reproducible development environments. Follow these instructions to set up and run the project on your system.
 
-## Requirements
+---
 
-- Install Nix (https://nixos.org/download)
-- Enable Flakes support (usually: Enable Flakes support (usually: `mkdir -p ~/.config/nix && echo "experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf`)
+## 1. Prerequisites
 
-## Enter the Dev Environment
+### NixOS / Linux / macOS
+1. **Install Nix:**
+	 - [Nix Installation Guide](https://nixos.org/download)
+2. **Enable Flakes support:**
+	 - Run:
+		 ```sh
+		 mkdir -p ~/.config/nix
+		 echo "experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf
+		 ```
 
-For all tools at once: nix develop
+### Windows (using WSL)
+1. **Install WSL:**
+	 - Open PowerShell as Administrator and run:
+		 ```powershell
+		 wsl --install -d Ubuntu-22.04
+		 ```
+	 - Restart your computer if prompted.
+2. **Open Ubuntu (WSL) and follow the Linux steps above to install Nix and enable flakes.**
 
-Or just the backend: nix develop .#backend
+---
 
-or just the frontend: nix develop .#frontend
+## 2. Clone the Repository
 
-Once inside the shell:
+Open a terminal (Linux/macOS/WSL) and run:
+```sh
+git clone https://github.com/your-org/toIPA.git
+cd toIPA
+```
 
-**Frontend:**:
+---
+
+## 3. Enter the Development Environment
+
+You can enter the Nix shell for the whole project or for each part individually:
+
+- **Full project:**
+	```sh
+	nix develop
+	```
+- **Backend only:**
+	```sh
+	nix develop .#backend
+	```
+- **Frontend only:**
+	```sh
+	nix develop .#frontend
+	```
+
+---
+
+## 4. Run the Project
+
+Open two terminals (or tabs):
+
+### Frontend
+```sh
+cd frontend
 yarn dev
+```
 
-**Backend:**:
+### Backend
+```sh
+cd backend
 python myapp.py
+```
+
+---
+
+## 5. Notes
+
+- Nix flakes ensure all dependencies and versions are consistent for every team member.
+- If you encounter issues, check the Nix documentation or ask in the team chat.
+- For Windows users, always work inside the Ubuntu WSL terminal.
+
+---
+
+## 6. Troubleshooting
+
+- If `nix develop` fails, make sure flakes are enabled and you are in the correct directory.
+- For WSL, ensure you are using Ubuntu 22.04 or newer.
+
+---
+
+Happy hacking!
 
 
