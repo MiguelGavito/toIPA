@@ -2,6 +2,17 @@
 
 This project uses Nix flakes for reproducible development environments. Follow these instructions to set up and run the project on your system.
 
+This Practice work on:
+
+&#x2611; Windows with WSL2.
+
+&#x2611; MacOS Apple Silicon.
+
+&#x2611; Linux.
+
+
+The test were maded on Windows 11, Linux Arch, Linux NixOS and a Macbook Air M4.
+
 ---
 
 ## 1. Prerequisites
