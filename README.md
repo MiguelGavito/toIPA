@@ -31,7 +31,7 @@ This project uses Nix flakes for reproducible development environments. Follow t
 
 Open a terminal (Linux/macOS/WSL) and run:
 ```sh
-git clone https://github.com/your-org/toIPA.git
+git clone https://github.com/MiguelGavito/toIPA.git
 cd toIPA
 ```
 
@@ -54,6 +54,8 @@ You can enter the Nix shell for the whole project or for each part individually:
 	nix develop .#frontend
 	```
 
+On macOS can show an error that request to desactivate airdrop.
+
 ---
 
 ## 4. Run the Project
@@ -63,6 +65,7 @@ Open two terminals (or tabs):
 ### Frontend
 ```sh
 cd frontend
+yarn
 yarn dev
 ```
 
