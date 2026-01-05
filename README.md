@@ -1,6 +1,6 @@
 # IPA Translator Practice
 
-This project uses Nix flakes for reproducible development environments. Follow these instructions to set up and run the project on your system.
+This practice uses Nix flakes for reproducible development environments. Follow these instructions to set up and run the practice project on your system.
 
 This Practice work on:
 
